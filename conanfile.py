@@ -6,9 +6,9 @@ from conans import ConanFile, tools
 
 
 class PocoConan(ConanFile):
-    name = "Poco"
+    name = "FinSec.Poco"
     version = "1.9.0"
-    url = "http://github.com/pocoproject/conan-poco"
+    url = "http://github.com/FinSecSystems/conan-poco"
     exports_sources = "CMakeLists.txt", "PocoMacros.cmake"  # REMOVE POCOMACROS IN NEXT VERSION!
     generators = "cmake", "txt"
     settings = "os", "arch", "compiler", "build_type"
@@ -38,6 +38,7 @@ class PocoConan(ConanFile):
                "enable_pagecompiler_file2page": [True, False],
                "force_openssl": [True, False],  # "Force usage of OpenSSL even under windows"
                "enable_tests": [True, False],
+               #"enable_samples": [True, False],
                "poco_unbundled": [True, False],
                "cxx_14": [True, False]
                }
@@ -66,7 +67,7 @@ enable_pagecompiler_file2page=False
 force_openssl=True
 enable_tests=False
 poco_unbundled=False
-cxx_14=False
+cxx_14=True
 '''
 
     def source(self):
@@ -87,7 +88,7 @@ cxx_14=False
 
     def requirements(self):
         if self.options.enable_netssl or self.options.enable_netssl_win or self.options.enable_crypto or self.options.force_openssl:
-            self.requires.add("OpenSSL/1.0.2o@conan/stable", private=False)
+            self.requires.add("OpenSSL/1.0.2n@conan/stable", private=False)
 
         if self.options.enable_data_mysql:
             # self.requires.add("MySQLClient/6.1.6@hklabbers/stable")
@@ -144,7 +145,8 @@ cxx_14=False
         """ Define the required info that the consumers/users of this package will have
         to add to their projects
         """
-        libs = [("enable_mongodb", "PocoMongoDB"),
+        libs = [("enable_util", "PocoUtil"),
+                ("enable_mongodb", "PocoMongoDB"),
                 ("enable_pdf", "PocoPDF"),
                 ("enable_net", "PocoNet"),
                 ("enable_netssl", "PocoNetSSL"),
@@ -157,7 +159,6 @@ cxx_14=False
                 ("enable_sevenzip", "PocoSevenZip"),
                 ("enable_zip", "PocoZip"),
                 ("enable_apacheconnector", "PocoApacheConnector"),
-                ("enable_util", "PocoUtil"),
                 ("enable_xml", "PocoXML"),
                 ("enable_json", "PocoJSON")]
 
