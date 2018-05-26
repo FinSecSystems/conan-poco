@@ -8,8 +8,6 @@ env:
   - CONAN_STABLE_BRANCH_PATTERN: release/*
   - CONAN_TOTAL_PAGES: 4
   - CONAN_UPLOAD_ONLY_WHEN_STABLE: 1
-  - secure: VVmmBgRP+BZDZAy3oD3S73aGBUyDqRIq/9WMwGuxNifQxbNPFzjyFKx5cib+9MaRWfU0C4il1+Y2/hDaPp+V1yNjA6FXNG62wburKtg2YmyQBZQWhtIShtoBOVGTgkQxpHiSAd2/53dgZcSG/YWFCaN+iwugyDBLiUfaKDaA0Kvo2nteXU8l3YkYwiZsMVM4wi9F5T6GD9lDMysIyB+pti3vcR8zm8O6U7EAWFbNKiV4KmUEwhD2i2zw5KrziA0uOqJGvo7R4yE1MFI645VlIzOxcMCkNi/JCEcgm2he/NhHtZ2eKDucmfvy6/1LUwVmLbB6s1jtAua8ouf0W0rRa78QVe4P/tj74nq8nrVcY3YSWLeiHXSgBV2YXQuiIG0nFNT/LtdvEmsgRGsFVvRM7uz2VZOIrwhFPy9/mp86o4+RQGeWNP2DiW1Wpq19vykrfW3EcXXAuJia5Yj7LRjIZS5VSMlh3TF0nsEe5uJwZW+dD/3xT2+c3fvUBrO/CFH3LK5DgsnVkYz0gee25Vi9x0bVixpi5Wupx5cLSkyyqVKBYJ/tOg5m1KACi7TGSGuXGPniqYWqVWGYeY/OWWDjeKMftK608S8V47sfLGVSGed5tbsMFORWII1bdHjON3Hf4wnDD+VUe5ldKciUfteuXtTmPclbmXPQnFpbDshcCOk=
-  - secure: HOlsTncnpComeve4uKbXtnxTIY9Wx84GDv3VhnOkbaKMHPKI4ZSur5ZJc0SP1dJP/XzcGFvFwC49SyKZXs8MqPKUlqBR60Ogu7iGW2lvftwM8T4YiHl8MWU7MLp02xaudPr+OZjf3XhzSNUdk8Ng/AtHucLIXcMxKZWJ9VeHpWFr7kmmMRH5hy5ZNxvQQb5n3MpvtrKunXKt+XOlRfwF3Eu/za3eU6gkMn0LR/kZdxNG8s0/tZwpXXFv5Ujh3iQC9XBADi3Mr7wOiNFTKyD/n1tyWdWKK1bxaf/ugxSobT3Y08xDHjwrQZ6A3x5Rr8KwEd0raSgvGNeuStKqBk5s3IUJwjN2/aScKubREgxxEC+RYGA7RhBYSxH8c2a74X6T/RyMWmAXE1Ac2LVe77IN43KN9KaOPWo60mPOkhVhYvQdsNXVdzNLOhJjas5iCZQrJWwax4i4C6Cv5fAScB5lBNjv9+xHaqQjjWUcEJAUYQPa6flllrqhxrIBsRwBYZ059RkDv7zArSc9/h9SDsTQexVi9I4WufhWho1M3qe8092Heazl8NMs9wlQNhQWL9qMPofR6n+pmVradaQks1frRZ9KrzUWKiVoQxv9IDgHaDZzscD4cp271k1rlIQIqaF6ZN5Sq2qVJh09BQ+VDyyStH6/iaaXOump3uoyqyOybWs=
 linux:
   os: linux
   sudo: required
@@ -22,78 +20,6 @@ osx:
   language: generic
 matrix:
   include:
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=1
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=2
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=3
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=4
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=1
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=2
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=3
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=4
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=1
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=2
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=3
-  - os: linux
-    sudo: required
-    language: python
-    python: '3.6'
-    services: *1
-    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=4
   - os: linux
     sudo: required
     language: python
@@ -123,25 +49,73 @@ matrix:
     language: python
     python: '3.6'
     services: *1
-    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=1
+    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=1
   - os: linux
     sudo: required
     language: python
     python: '3.6'
     services: *1
-    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=2
+    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=2
   - os: linux
     sudo: required
     language: python
     python: '3.6'
     services: *1
-    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=3
+    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=3
   - os: linux
     sudo: required
     language: python
     python: '3.6'
     services: *1
-    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=4
+    env: CONAN_GCC_VERSIONS=6 CONAN_DOCKER_IMAGE=lasote/conangcc6 CONAN_CURRENT_PAGE=4
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=1
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=2
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=3
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=5 CONAN_DOCKER_IMAGE=lasote/conangcc5 CONAN_CURRENT_PAGE=4    
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=1
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=2
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=3
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_CURRENT_PAGE=4
   - os: linux
     sudo: required
     language: python
@@ -166,38 +140,30 @@ matrix:
     python: '3.6'
     services: *1
     env: CONAN_CLANG_VERSIONS=4.0 CONAN_DOCKER_IMAGE=lasote/conanclang40 CONAN_CURRENT_PAGE=4
-  - os: osx
-    language: generic
-    osx_image: xcode7.3
-    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=1
-  - os: osx
-    language: generic
-    osx_image: xcode7.3
-    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=2
-  - os: osx
-    language: generic
-    osx_image: xcode7.3
-    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=3
-  - os: osx
-    language: generic
-    osx_image: xcode7.3
-    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=4
-  - os: osx
-    language: generic
-    osx_image: xcode8.3
-    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=1
-  - os: osx
-    language: generic
-    osx_image: xcode8.3
-    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=2
-  - os: osx
-    language: generic
-    osx_image: xcode8.3
-    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=3
-  - os: osx
-    language: generic
-    osx_image: xcode8.3
-    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=4
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=1
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=2
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=3
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_CLANG_VERSIONS=3.9 CONAN_DOCKER_IMAGE=lasote/conanclang39 CONAN_CURRENT_PAGE=4
   - os: osx
     language: generic
     osx_image: xcode9
@@ -214,6 +180,39 @@ matrix:
     language: generic
     osx_image: xcode9
     env: CONAN_APPLE_CLANG_VERSIONS=9.0 CONAN_CURRENT_PAGE=4
+  - os: osx
+    language: generic
+    osx_image: xcode8.3
+    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=1
+  - os: osx
+    language: generic
+    osx_image: xcode8.3
+    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=2
+  - os: osx
+    language: generic
+    osx_image: xcode8.3
+    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=3
+  - os: osx
+    language: generic
+    osx_image: xcode8.3
+    env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=4    
+  - os: osx
+    language: generic
+    osx_image: xcode7.3
+    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=1
+  - os: osx
+    language: generic
+    osx_image: xcode7.3
+    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=2
+  - os: osx
+    language: generic
+    osx_image: xcode7.3
+    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=3
+  - os: osx
+    language: generic
+    osx_image: xcode7.3
+    env: CONAN_APPLE_CLANG_VERSIONS=7.3 CONAN_CURRENT_PAGE=4
+
 install:
 - chmod +x .travis/install.sh
 - "./.travis/install.sh"
