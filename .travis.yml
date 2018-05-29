@@ -25,6 +25,30 @@ matrix:
     language: python
     python: '3.6'
     services: *1
+    env: CONAN_GCC_VERSIONS=4.8 CONAN_DOCKER_IMAGE=lasote/conangcc48 CONAN_CURRENT_PAGE=1
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=4.8 CONAN_DOCKER_IMAGE=lasote/conangcc48 CONAN_CURRENT_PAGE=2
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=4.8 CONAN_DOCKER_IMAGE=lasote/conangcc48 CONAN_CURRENT_PAGE=3
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
+    env: CONAN_GCC_VERSIONS=4.8 CONAN_DOCKER_IMAGE=lasote/conangcc48 CONAN_CURRENT_PAGE=4  
+  - os: linux
+    sudo: required
+    language: python
+    python: '3.6'
+    services: *1
     env: CONAN_GCC_VERSIONS=7 CONAN_DOCKER_IMAGE=lasote/conangcc7 CONAN_CURRENT_PAGE=1
   - os: linux
     sudo: required
